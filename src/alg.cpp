@@ -18,7 +18,7 @@ BST<std::string> makeTree(const char* filename) {
     while (true) {
       char symb = file.get();
       if ((symb >= 65 && symb <= 90) || (symb >= 97 && symb <= 122))
-        text = tolower(symb);
+        text += tolower(symb);
       else
         break;
     }
