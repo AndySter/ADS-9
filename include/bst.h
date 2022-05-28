@@ -18,15 +18,16 @@ class BST {
         root -> value = information;
         root -> count = 1;
         root -> left = root -> right = nullptr;
-      } else if ( information < root -> value) {
+      } else if (information < root -> value) {
           root -> left = addNode(root -> left, information);
-      } else if ( information > root -> value) {
+      } else if (information > root -> value) {
           root -> right = addNode(root -> right, information);
       } else {
         root -> count++;
       }
     return root;
     }
+
     int searchNode(Node *root, const T& information) {
       if (root == nullptr) {
         return 0;
@@ -38,7 +39,8 @@ class BST {
         return searchNode(root -> right, information);
       }
     }
-    int depthTree(Node *root){
+
+    int depthTree(Node *root) {
       int leftct = 0, rightct = 0;
       if (root == nullptr) {
         return 0;
@@ -52,6 +54,7 @@ class BST {
         }
       }
     }
+
  public:
     BST() :root(nullptr) {}
     void addNode(const T& information) {
