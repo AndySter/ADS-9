@@ -35,7 +35,7 @@ class BST {
       else if (root -> value > information)
         return searchNode(root -> left, information);
       else
-        return searchNode(root -> right, information)
+        return searchNode(root -> right, information);
     }
   
     int depthTree(Node *root){
@@ -52,14 +52,14 @@ class BST {
     }
   
   public:
-    BST() :root(nullptr){}
+    BST() :root(nullptr) {}
     void addNode(const T& information) {
       root = addNode(root, information); 
     }
     int depth() {
       return depthTree(root) - 1;
     }
-    int search() {
+    int search(const T& information) {
       return searchNode(root, information);
     }
 };
