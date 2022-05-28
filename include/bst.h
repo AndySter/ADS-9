@@ -48,9 +48,9 @@ class BST {
         leftct = depthTree(root -> left);
         rightct = depthTree(root -> right);
         if (leftct > rightct) {
-          return leftct++;
+          return ++leftct;
         } else {
-          return rightct++;
+          return ++rightct;
         }
       }
     }
@@ -61,7 +61,7 @@ class BST {
       root = addNode(root, information);
     }
     int depth() {
-      return depthTree(root) - 1;
+      return depthTree(root)-1;
     }
     int search(const T& information) {
       return searchNode(root, information);
