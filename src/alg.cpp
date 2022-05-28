@@ -9,7 +9,7 @@ BST<std::string> makeTree(const char* filename) {
   BST<std::string> textTree;
   std::ifstream file(filename);
   if (!file) {
-    std::cout<<"File not found"<<endl;
+    std::cout<<"File not found"<<std::endl;
     return textTree;
   }
   std::string text = "";
